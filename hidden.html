@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>The Book of Hidden Things</title>
+ </head>
+<body>
+
+<h2>Hidden things by Balaji Sarvepalli</h2>
+
+<form>
+    <label for="form1_secret">Enter the secret word </label>
+    <input type ="password" id="form1_secret" name="form1_secret" min=10 max=50 step=2 value=Secret> <br>
+
+    <label for="form1_guess">Enter a guess </label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+
+<p id="result">correct:0  wrong:0 </p>
+
+<script> 
+let correct=0;
+let wrong =0;
+function processGuess() {
+    console.log("checking the guess")
+    secret = document.getElementById("form1_secret").value;
+    guess = document.getElementById("form1_guess").value;
+    out= document.getElementById('result')
+    
+    if(secret==guess){
+        alert("Congratulations")
+        correct++
+        out.innerHTML = "Correct:" +correct + "worng:"+ wrong
+    } else {
+        alert("Sorry");
+        wrong++
+        out.innerHTML = "Correct:" +correct + "worng:"+ wrong
+    }
+}
+
+    let currentImage=0;
+
+</script>
+
+</body>
+</html> 
