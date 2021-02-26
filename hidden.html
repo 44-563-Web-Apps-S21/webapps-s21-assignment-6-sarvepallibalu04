@@ -19,7 +19,9 @@
 
 
 <p id="result">correct:0  wrong:0 </p>
-
+<div class="container">
+    <img src="images/sage.jpg" id="Sage" width="200" height="200" onclick="rotateImage()" alt="Sage">
+</div>
 <script> 
 let correct=0;
 let wrong =0;
@@ -41,7 +43,25 @@ function processGuess() {
 }
 
     let currentImage=0;
-
+    function rotateImage()
+{
+    Image= document.getElementById("Sage")
+   switch(currentImage)
+    {
+    case 0:
+        currentImage=currentImage+1;
+    Image.src= "images/Abelia.jpg"
+        break;
+    case 1:
+        currentImage=currentImage+1;
+        Image.src= "images/Radish.jpg"
+        break;
+    case 2:
+        currentImage=currentImage+1;
+        Image.src= "images/sage.jpg"
+    break;
+    }
+}
 </script>
 
 </body>
