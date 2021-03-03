@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Mathematical Application</title>
+ </head>
+<body>
+
+<h2>Balaji Sarvepalli computes</h2>
+
+<form>
+    <label for="form1_first">Enter a number</label>
+    <input type ="number" id="form1_first" name="form1_first" min=10 max=50 step=2 value=10> <br>
+
+    <label for="form1_second">Enter a number</label>
+    <input type ="text" id="form1_second" name="form1_second" value="2" autofocus> <br>
+
+    <input type="button" onclick="permutations()" value="Compute">
+</form>
+
+
+<p id="result">The result will be displayed </p>
+
+
+<script> 
+
+function permutations(){
+    console.log("Getting form values")
+    first = document.getElementById("form1_first").value
+         second = document.getElementById("form1_second").value
+        out = document.getElementById("result")
+        let product=1;
+        for( i=first;i>=(first-second+1);i--){
+            product *=i;
+        }
+        
+        out.innerHTML = product
+    }
+</script>
+
+</body>
+</html> 
