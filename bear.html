@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>World of animals</title>
+    
+ </head>
+<body>
+
+<h2>Balaji Sarvepalli builds a bear</h2>
+
+<form>
+    <label for="Hat">Hat </label>
+    <input type ="checkbox" id="Hat" name=Hat min=10 max=50 step=2 value=Hat> <br>
+
+    <label for="Scarf">scarf </label>
+    <input type ="checkbox" id="Scarf" name="Scarf" min=10 max=50 value="Scarf"> <br>
+
+    <label for="Shirt">Shirt </label>
+    <input type ="checkbox" id="Shirt" name="Shirt" value="Shirt"> <br>
+
+    <input type="button" onclick="startbear()" value="Start a bear">
+</form>
+
+
+<p id="result">The result be will displayed </p>
+
+
+<script>
+    let my_bear = {}
+    function startbear(){
+            console.log("Getting form values")
+        if(document.getElementById("Hat").checked){
+            my_bear["Hat"]=true;
+        }else{
+            my_bear["Hat"]=false;
+        }
+        if(document.getElementById("Scarf").checked){
+            my_bear["Scarf"]=true;
+        }else{
+            my_bear["Scarf"]=false;
+        } 
+         if(document.getElementById("Shirt").checked){
+            my_bear["Shirt"]=true;
+        }else{
+            my_bear["Shirt"]=false;
+        }
+         out = document.getElementById("result")
+         my_bear= JSON.stringify(my_bear);
+         out.innerHTML=my_bear
+         my_bear= JSON.parse(my_bear)
+        
+    }
+</script>
+
+
+</body>
+</html> 
